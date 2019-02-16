@@ -21,7 +21,7 @@ Current databases:
     / For storing product information (name, quantity, description)
     Database name: prod
     Table(s):      products
-    Columns:       prodname, prodquant, proddesc
+    Columns:       prodname (VARCHAR(80), prodquant (INT), proddesc (VARCHAR(400)), price (FLOAT)
     Username:      root
     Password:      root
 
