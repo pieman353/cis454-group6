@@ -14,3 +14,14 @@ new:
 username is root and no password to check database information
 7. index1.php is the mainpage for customer, add front end work on that page (several pics have already been added there)
 this file may be updated later
+
+HOW TO USE XAMPP:
+1. Go to apachefriends.org and pick the download for your operating system.
+2. Once the installer has finished, launch the control panel.
+3. Next to the Apache module, click "Start".
+4. Find the directory XAMPP was installed in (default C:\XAMPP on Windows)
+5. Move the entire website directory into the htdocs folder.
+6. Browse the website by replacing the URL so that you are browsing under
+localhost; for instance, access "zhuce.php" by entering 
+"localhost/cis454-group6/php/zhuce.php".
+
