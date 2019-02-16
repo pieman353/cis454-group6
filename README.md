@@ -15,6 +15,24 @@ username is root and no password to check database information
 7. index1.php is the mainpage for customer, add front end work on that page (several pics have already been added there)
 this file may be updated later
 
+DATABASE INFORMATION:
+
+Current databases:
+    / For storing product information (name, quantity, description)
+    Database name: prod
+    Table(s):      products
+    Columns:       prodname, prodquant, proddesc
+    Username:      root
+    Password:      root
+
+    / For storing user information
+    Database name: signup
+    Table(s):      acc
+    Columns:       username, password, firstname, lastname
+    Username:      root
+    Password:      
+    
+
 HOW TO USE XAMPP:
 1. Go to apachefriends.org and pick the download for your operating system.
 2. Once the installer has finished, launch the control panel.
