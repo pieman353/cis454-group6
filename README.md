@@ -18,6 +18,7 @@ this file may be updated later
 DATABASE INFORMATION:
 
 Current databases:
+    
     / For storing product information (name, quantity, description)
     Database name: prod
     Table(s):      products
