@@ -7,5 +7,14 @@ class productCatalog
         print_r(productDatabase::getProductDesc("Yogurt"));
         echo '</pre>';
     }
+
+    /* input: Product object
+       output: nothing
+
+       -> Insert product into product database 
+       */
+    public function addProduct($prod) {
+        productDatabase::insertProd($prod);
+    }
 }
 ?>

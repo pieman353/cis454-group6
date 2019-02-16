@@ -24,5 +24,19 @@ class productDatabase {
         }
         return $desc;
     }
+    public static function insertProd($prod) {
+        $host = "localhost";
+        $dbusername = "root";
+        $dbpassword = "root";
+        $dbname = "prod";
+
+        $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+        if (mysqli_connect_error()) {
+            die("Connect Error (".mysqli_connect_errno().")".mysqli_connect_error());
+        }
+        else {
+            $sql = "INSERT INTO $signin_database_table (prodname, prodquant, proddesc, price) values ('$prod->name','$prod->quantity', '$prod->desc', '$prod->price')";
+        }
+    }
 }
 ?>
