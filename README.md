@@ -18,20 +18,22 @@ this file may be updated later
 DATABASE INFORMATION:
 
 Current databases:
+
+    host: signin.c3bf4omfm2fy.us-east-2.rds.amazonaws.com
     
     / For storing product information (name, quantity, description)
     Database name: prod
     Table(s):      products
     Columns:       prodname (VARCHAR(80), prodquant (INT), proddesc (VARCHAR(400)), price (FLOAT)
     Username:      root
-    Password:      root
+    Password:      rootroot
 
     / For storing user information
     Database name: signup
     Table(s):      acc
     Columns:       username, password, firstname, lastname
     Username:      root
-    Password:      
+    Password:      root
     
 
 HOW TO USE XAMPP:
@@ -49,14 +51,8 @@ HOW TO USE MYSQL:
 2. Select MySQL Community Server.
 3. In the installer, install ALL components (if prompted for a password, make it root - be sure to use this password later when accessing the DB)
 4. After the installation, open the MySQL Workbench.
-5. In the menu bar, navigate to Database -> Connect to Database... and use the default options.
-6. Under the menu bar, in the row of graphical buttons, click the fourth from the left (Create a new schema in the connected server)
-7. Consult connect.php and name the database accordingly (for instance, the sign-up server is called signup)
-8. Click apply
-9. In the left hand window labelled Schemas, under the new signup database, right-click tables and select "Create table"
-10. Name it according to connect.php (in this instance, "acc")
-11. Where it says Column Name and Datatype, add the required columns (here, "username", "password", "firstname", "lastname") with data type as VARCHART(45)
-12. Click apply.
-13. Modify the php source files if needed to set your database's username and password correctly and run the website under XAMPP. The database should be updated on sign-up attempts.
+5. On the welcome page, click the plus sign next to MySQL Connections.
+6. Use the hostname, username, and password specified above.
+7. You are now connected to the AWS database!
 
 
