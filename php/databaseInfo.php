@@ -6,11 +6,11 @@ class databaseInfo {
     static public $product_database_username = "root";
     static public $product_database_password = "root";
 
-    static public $signin_database_name = "signup";
+    static public $signin_database_name = "signin";
     static public $signin_database_table = "acc";
     static public $signin_database_username = "root";
-    static public $signin_database_password = "";
+    static public $signin_database_password = "rootroot";
 
-    static public $database_host = "localhost";
+    static public $database_host = "signin.c3bf4omfm2fy.us-east-2.rds.amazonaws.com";
 }
 ?>
