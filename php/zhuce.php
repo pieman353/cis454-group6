@@ -20,9 +20,18 @@
                     $conn = new mysqli(databaseInfo::$database_host, databaseInfo::$signin_database_username, 
                     databaseInfo::$signin_database_password, databaseInfo::$signin_database_name);
 
+                    $tab = databaseInfo::$signin_database_table;
+
+                    $query = "SELECT username FROM $tab WHERE username = '$username'";
+                    $res = $conn->query($query);
+                    
                     if(mysqli_connect_error()){
                         die('Connect Error ('.mysqli_connect_errno().')'.mysqli_connect_error());
-                    }else{
+                    }
+                    else if( mysqli_num_rows($res) > 0) {
+                        echo "User already exists.";
+                    }
+                    else{
                         $tab = databaseInfo::$signin_database_table;
                         $sql = "INSERT INTO $tab (firstname,lastname,username, password) values ('$firstname','$lastname','$username','$password')";
                         if($conn->query($sql)){
