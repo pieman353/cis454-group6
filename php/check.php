@@ -1,4 +1,5 @@
 <?php
+            require_once("databaseInfo.php");
             session_start();
             $error = '';
             
@@ -9,9 +10,12 @@
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     
-                    $conn = mysqli_connect("localhost","root","","asignup");
+                    $conn = mysqli_connect(databaseInfo::$database_host,databaseInfo::$signin_database_username,
+                    databaseInfo::$signin_database_password,databaseInfo::$signin_database_name);
+
+                    $tab = databaseInfo::$signin_database_table;
                     
-                    $query = "SELECT username, password from acc where username=? AND password=? LIMIT 1";
+                    $query = "SELECT username, password from $tab where username=? AND password=? LIMIT 1";
                     $stmt = $conn->prepare($query);
                     $stmt->bind_param("ss",$username,$password);
                     $stmt->execute();

@@ -5,11 +5,12 @@ class productDatabase {
        Input: prodName -> string containing product
        Output: desc -> array of matching descriptions
        */
+    require_once("databaseInfo.php")
     public static function getProductDesc($prodName) {
-        $host = "localhost";
-        $dbusername = "root";
-        $dbpassword = "root";
-        $dbname = "prod";
+        $host = databaseInfo::$database_host;
+        $dbusername = databaseInfo::$product_database_username;
+        $dbpassword = databaseInfo::$product_database_password;
+        $dbname = databaseInfo::$product_database_name;
 
         $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
         if (mysqli_connect_error()) {
