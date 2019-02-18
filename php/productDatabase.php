@@ -7,7 +7,7 @@ class productDatabase {
        */
     require_once("databaseInfo.php")
     public static function getProductDesc($prodName) {
-        $host = databaseInfo::$database_host;
+        $host = databaseInfo::$prod_database_host;
         $dbusername = databaseInfo::$product_database_username;
         $dbpassword = databaseInfo::$product_database_password;
         $dbname = databaseInfo::$product_database_name;

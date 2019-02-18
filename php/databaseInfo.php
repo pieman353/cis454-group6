@@ -12,5 +12,7 @@ class databaseInfo {
     static public $signin_database_password = "rootroot";
 
     static public $database_host = "signin.c3bf4omfm2fy.us-east-2.rds.amazonaws.com";
+    static public $prod_database_host = "prod.c3bf4omfm2fy.us-east-2.rds.amazonaws.com";
+    static public $cart_database_host = "cart.c3bf4omfm2fy.us-east-2.rds.amazonaws.com";
 }
 ?>
