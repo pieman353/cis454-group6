@@ -1,6 +1,5 @@
 <?php
 include('session.php');
-include('processProducts.php');
 
 if(!isset($_SESSION['login_user'])){
 header("location: signin.php");
@@ -10,15 +9,15 @@ header("location: signin.php");
 
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-2.2.4.js"> </script>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Main_page</title>
       <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="../CSS_img/customerMain.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="../javascript/store.js" async></script>
     <style>
         * {
             margin:0;
@@ -36,6 +35,19 @@ header("location: signin.php");
             right: 25%;
             width: 50%;
             height: 50%;
+            padding: 6px 16px;
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+            position: fixed;
+        }
+         .white_content2 {
+            display: none;
+            position: absolute;
+            top: 48px;
+            right: 0%;
+            width: 300px;
+            height: 500px;
             padding: 6px 16px;
             background-color: white;
             z-index:1002;
@@ -66,7 +78,7 @@ header("location: signin.php");
         .close a {
             color:#333;
             text-decoration:none;
-            font-size:14px;
+            font-size:19px;
             font-weight:700;
         }
         .con {
@@ -75,6 +87,8 @@ header("location: signin.php");
             font-weight: 700;
             width:100%;
             display: inline;
+            color: black;
+            
         }
     </style>
 </head>
@@ -89,7 +103,30 @@ header("location: signin.php");
                     <b class="logout" id="logout"><a href="logout.php">Logout</a></b>
                 </div>
                 <div class="shoppingCart">
-                    <i class="fas fa-shopping-cart"></i>
+                    <a href="javascript:void(0)" onclick="show('lightx')"><i class="fas fa-shopping-cart"></i></a>
+                        <div id="lightx" class="white_content2">
+                            <div class="close">
+                                <a href="javascript:void(0)" onclick="hide('lightx')"> 
+                                    X
+                                </a>
+                            </div>
+                            <div class="con">
+                                <h2 class="section-header">CART</h2>
+                                <div class="cart-row">
+                                    <span class="cart-item cart-header cart-column">ITEM</span>
+                                    <span class="cart-price cart-header cart-column">PRICE</span>
+                                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                                </div>
+                                <div class="cart-items">
+                                </div>
+                                <div class="cart-total">
+                                    <strong class="cart-total-title">Total</strong>
+                                    <span class="cart-total-price">$0</span>
+                                </div>
+                                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                            </div>
+                        </div>
+                    <div id="fade" class="black_overlay"></div>
                 </div>
             </div>
         </div>
