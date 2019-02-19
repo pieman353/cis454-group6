@@ -10,7 +10,7 @@ header("location: signin.php");
 
 <html lang="en">
 <head>
-    <script src="index1.js"> </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"> </script>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Main_page</title>
@@ -18,7 +18,7 @@ header("location: signin.php");
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="../CSS_img/customerMain.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <script src="/js/jquery-2.1.4.min.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <style>
         * {
             margin:0;
