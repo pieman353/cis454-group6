@@ -1,0 +1,70 @@
+body {
+  background-color: #FFEFD5;
+}
+
+.section {
+    background-color: #FF4500;
+    width: 35%;
+    height: 30%;
+    display: block;
+    border-radius: 7px;
+    margin: auto;
+    padding: 12px 5px 12px 5px;
+    margin-top: 8%;
+}
+
+h1 {
+    color: #FF4500;
+    text-align: center;
+    font-size: 75px;
+    margin-top: 2.5%;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    color: #FFEFD5;
+}
+form {
+    margin-left: 31%;
+    padding: 10px;
+}
+
+.firstname input[type = "text"] {
+    border-radius: 2px 2px 2px 2px;
+    width: 140px;
+    height: 20px;
+}
+
+.lastname input[type = "text"] {
+    border-radius: 2px 2px 2px 2px;
+    width: 140px;
+    height: 20px;
+}
+
+.username input[type = "text"] {
+    border-radius: 2px 2px 2px 2px;
+    width: 140px;
+    height: 20px;
+}
+
+.password input[type = "password"] {
+    border-radius: 2px 2px 2px 2px;
+    width: 140px;
+    height: 20px;
+}
+
+.email input[type = "email"] {
+    border-radius: 2px 2px 2px 2px;
+    width: 140px;
+    height: 20px;
+}
+
+.sub input[type = "submit"] {
+    margin-left: 20px;
+    width: 100px;
+    height: 20px;
+}
+.link {
+    padding: 10px 0px 0px 0px;
+}

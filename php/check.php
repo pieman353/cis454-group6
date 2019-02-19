@@ -2,10 +2,8 @@
             require_once("databaseInfo.php");
             session_start();
             $error = '';
-            echo "f";
             
             if(isset($_POST['submit'])){
-                echo "Fugg off";
                 if(empty($_POST['username'])||empty($_POST['password'])){
                     $error="Username or Password is invalid";
                 }else{
