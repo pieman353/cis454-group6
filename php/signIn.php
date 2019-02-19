@@ -30,8 +30,7 @@ if(isset($_SESSION['login_user'])){
             </div>
             <a href="../CustomerLogin.html">no account?</a>
             <a href="../FrontPage.html">Go back to main page</a>
-            <span><?php echo $error; ?></span>
+            <span><?php echo $error?></span>
         </form>
-       
     </div>
 </body>
