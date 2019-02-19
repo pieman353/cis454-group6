@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta charset="utf-8">
         <title>Customer</title>
@@ -8,19 +7,25 @@
 <link rel="stylesheet" href="CSS_img/clogin.css">
     </head>
     <body>
+        <?php
+        include('check.php');
+        if(isset($_SESSION['login_user'])) {
+            header("location: index1.php");
+        }
+        ?>
       <h1> Syracuse Food Services </h1>
         <div class = "box">
 	  <div class = "main">
 	  <div class = "avatar">
 	      <img src = "https://cdn4.iconfinder.com/data/icons/materia-flat-human-vol-1/24/013_005_people_person_avatar_profile-512.png">
             </div>
-	    <input type = "text" placeholder = "Username" required>
+	    <input name = "username" id = "password" type = "text" placeholder = "Username" required>
 	    <div class = "bar">
 	      <i></i>
 	    </div>
-	    <input type = "password" placeholder = "Password" required>
-	    <button> Sign in
-	    </button>
+	    <input name = "password" id = "password" type = "password" placeholder = "Password" required>
+	    <button name = "submit" id = "submit"> Sign in
+        </button>
 	  </div>
         </div>
     </body>

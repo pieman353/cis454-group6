@@ -1,0 +1,1 @@
+var itemblocks = document.getElementsByClassName("itemBlock");

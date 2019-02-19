@@ -1,5 +1,6 @@
 <?php
 include('session.php');
+include('processProducts.php');
 
 if(!isset($_SESSION['login_user'])){
 header("location: signin.php");
@@ -9,6 +10,7 @@ header("location: signin.php");
 
 <html lang="en">
 <head>
+    <script src="index1.js"> </script>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Main_page</title>
