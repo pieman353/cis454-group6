@@ -1,0 +1,16 @@
+This website must be run on a local web server.
+However, it does NOT require a local MySQL database.
+
+1. Download XAMPP from apachefriends.org (Apache-based web server software).
+2. The only components that must be installed are Apache and PHP. You may also
+choose the default installation, which installs all components, if you wish.
+3. After installation, navigate to the XAMPP root directory (in Windows, this is
+C:/xampp/htdocs). The location of the htdocs may differ depending on your system,
+but it will always be called htdocs.
+4. Copy the cis454-group6 folder into the htdocs folder (so that the directory is 
+now xampp/htdocs/cis454-group).
+5. Open the XAMPP Control Panel.
+6. Next to the Apache module, click start.
+7. Open any web browser and type localhost/cis454-group6/FrontPage.html
+8. You can now browse the site normally, using the back and forward navigation buttons
+on your browser. 
