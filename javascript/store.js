@@ -41,7 +41,7 @@ for (var i=0; i<addItemButtons.length; i++) {
             //console.log(products[index]);
         }
         else {
-            var newProduct = new Product(product, qty, price);
+            var newProduct = new Product(product, qty, price*qty);
             //console.log(newProduct);
             products.push(newProduct);
         }
@@ -50,8 +50,10 @@ for (var i=0; i<addItemButtons.length; i++) {
     })
 }
 
-function removeFromCart(prod) {
+function removeFromCart(event) {
+    prod = event.target.parentElement.parentElement.childNodes[1].childNodes[0].data;
     products = products.filter(function(x) { return x.name != prod;});
+    console.log(products);
     updateCart();
 }
 
@@ -68,14 +70,15 @@ function updateCart() {
         var qtyCell = row.insertCell(2);
         var priceCell = row.insertCell(3);
 
-        removeCell.innerHTML = "<a href='XXXX' onclick='removeFromCart(this);' /a>";
+        removeCell.innerHTML = "<a>x</a>"
+        removeCell.addEventListener("click", removeFromCart);
         nameCell.innerHTML = products[i].name;
         qtyCell.innerHTML = products[i].quantity;
         priceCell.innerHTML = "$" + Number(products[i].price.toFixed(2));
         totalprice += Number(products[i].price.toFixed(2));
     }
     var totalElem = document.getElementsByClassName("cart-total-price")[0];
-    totalElem.innerHTML = "$" + totalprice;
+    totalElem.innerHTML = "$" + totalprice.toFixed(2);
 }
 
 function updateCartTotal(){
