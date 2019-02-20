@@ -16,8 +16,8 @@ header("location: customerlogin.php");
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="../CSS_img/customerMain.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <script src="/js/jquery-2.1.4.min.js"></script>
-    <script src="../javascript/store.js" async></script>
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
     <style>
         * {
             margin:0;
@@ -27,6 +27,9 @@ header("location: customerlogin.php");
             height: 100%;
             width: 100%;
             font-size:12px;
+        }
+        thead {
+            display: table-row-group 
         }
         .white_content {
             display: none;
@@ -86,9 +89,12 @@ header("location: customerlogin.php");
             font-size: 20px;
             font-weight: 700;
             width:100%;
-            display: inline;
+            display: table;
             color: black;
             
+        }
+        span {
+            display: inline-block;
         }
     </style>
 </head>
@@ -112,10 +118,21 @@ header("location: customerlogin.php");
                             </div>
                             <div class="con">
                                 <h2 class="section-header">CART</h2>
-                                <div class="cart-row">
-                                    <span class="cart-item cart-header cart-column">ITEM</span>
-                                    <span class="cart-price cart-header cart-column">PRICE</span>
-                                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                                <table class="cart-row" id="myTable">
+                                    <thead>
+                                    <tr>
+                                        <th>Remove</th>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    </thead>
+                                    <br>
+                                    <tbody id="tbodyid">
+                                    <tr>
+                                    </tr>
+                                    </tbody>
+                                </table>                                    
                                 </div>
                                 <div class="cart-items">
                                 </div>
@@ -142,7 +159,7 @@ header("location: customerlogin.php");
                             $1.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light')">
-                            this is an apple
+                            Apple
                         </a>
                         <div id="light" class="white_content">
                             <div class="close">
@@ -195,7 +212,7 @@ header("location: customerlogin.php");
                             $0.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light2')">
-                            this is an orange
+                            Orange
                         </a>
                         <div id="light2" class="white_content">
                             <div class="close">
@@ -248,7 +265,7 @@ header("location: customerlogin.php");
                             $3.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light3')">
-                            this is a yogurt
+                            Yogurt
                         </a>
                         <div id="light3" class="white_content">
                             <div class="close">
@@ -301,7 +318,7 @@ header("location: customerlogin.php");
                             $0.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light4')">
-                            this is an banana
+                            Banana
                         </a>
                         <div id="light4" class="white_content">
                             <div class="close">
@@ -360,7 +377,7 @@ header("location: customerlogin.php");
                             $1.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light5')">
-                            this is cheetos
+                            Cheetos
                         </a>
                         <div id="light5" class="white_content">
                             <div class="close">
@@ -413,7 +430,7 @@ header("location: customerlogin.php");
                             $1.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light6')">
-                            this is doritos
+                            Doritos
                         </a>
                         <div id="light6" class="white_content">
                             <div class="close">
@@ -466,7 +483,7 @@ header("location: customerlogin.php");
                             $0.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light7')">
-                            this is m&m
+                            M&Ms
                         </a>
                         <div id="light7" class="white_content">
                             <div class="close">
@@ -519,7 +536,7 @@ header("location: customerlogin.php");
                             $2.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light8')">
-                            this is oreos
+                            Oreos
                         </a>
                         <div id="light8" class="white_content">
                             <div class="close">
@@ -578,7 +595,7 @@ header("location: customerlogin.php");
                             $1.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light9')">
-                            this is coke
+                            Coke
                         </a>
                         <div id="light9" class="white_content">
                             <div class="close">
@@ -631,7 +648,7 @@ header("location: customerlogin.php");
                             $1.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light10')">
-                            this is mountain dew
+                            Mountain Dew
                         </a>
                         <div id="light10" class="white_content">
                             <div class="close">
@@ -684,7 +701,7 @@ header("location: customerlogin.php");
                             $1.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light11')">
-                            this is water
+                            Water
                         </a>
                         <div id="light11" class="white_content">
                             <div class="close">
@@ -737,7 +754,7 @@ header("location: customerlogin.php");
                             $2.99
                         </div>
                         <a href="javascript:void(0)" onclick="show('light12')">
-                            this is pure leaf
+                            Pure Leaf
                         </a>
                         <div id="light12" class="white_content">
                             <div class="close">
@@ -785,6 +802,25 @@ header("location: customerlogin.php");
             </div>
         </div>
     </div>    
-    
+    <script src="../javascript/store.js" async></script>
+    <script>
+    $(document).ready(function(){
+    $(".q_header").each(function(){
+        // Get content
+        var 
+            content = $(this).text(),
+        // get first word
+            first_w = content.match("/([\w\-]+)/");
+
+        // replace the first word with first word and break
+        var new_cnt = content.replace(first_w[0], first_w[0] + "</br>");
+
+        // add the css to make it inline-block
+        $(this).css("display", "inline-block").html(new_cnt);
+
+    });
+
+});
+    </script>
 </body>
 </html>
