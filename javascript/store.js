@@ -1,4 +1,5 @@
 var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+
 for(var i=0; i<removeCartItemButtons.length; i++){
     var button = removeCartItemButtons[i];
     button.addEventListener('click',function(event){
@@ -18,6 +19,30 @@ let Product = class {
 
 var totalprice = 0;
 var products = [];
+
+var purchaseButton = document.getElementsByClassName("btn btn-primary btn-purchase")[0];
+
+purchaseButton.addEventListener("click",
+function Popup(data)
+    {
+        var mywindow = window.open('', 'my div', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Receipt</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body style="direction:rtl;"><pre>');
+        //mywindow.document.write(document.getElementById("myTable").innerHTML);
+        mywindow.document.write("Receipt <br>")
+        /*mywindow.document.write("<br>Yogurt 1 $2.13 <br>");
+        mywindow.document.write("Cheese 4 $3.11 <br>");
+        mywindow.document.write("Total: $33.44 <br>"); */
+        for (var i = 0; i < products.length; i++) {
+            mywindow.document.write(products[i].name + " " + products[i].quantity + " $" + products[i].price + "<br>");
+        }
+        mywindow.document.write("<br>Total: $" + totalprice.toFixed(2));
+        mywindow.document.write('</pre></body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    });
 
 // Add item to cart 
 
