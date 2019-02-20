@@ -36,7 +36,7 @@ if(isset($_SESSION['login_user'])){
 	  	</div>
 		</div>
 	  <div class="link">Don't have an account?
-            <a href="SignUp.html">Click here to sign up</a>
+            <a href="../SignUp.html">Click here to sign up</a>
           </div>
     </body>
 </html>
