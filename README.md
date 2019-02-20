@@ -23,17 +23,27 @@ Current databases:
     
     / For storing product information (name, quantity, description)
     Database name: prod
+    Database host: prod.c3bf4omfm2fy.us-east-2.rds.amazonaws.com
     Table(s):      products
     Columns:       prodname (VARCHAR(80), prodquant (INT), proddesc (VARCHAR(400)), price (FLOAT)
     Username:      root
     Password:      rootroot
 
     / For storing user information
-    Database name: signup
+    Database name: signin
+    Database host: signin.c3bf4omfm2fy.us-east-2.rds.amazonaws.com
     Table(s):      acc
     Columns:       username, password, firstname, lastname
     Username:      root
     Password:      root
+
+    / For storing user shopping cart
+    Database name: cart
+    Database host: cart.c3bf4omfm2fy.us-east-2.rds.amazonaws.com
+    Tables:        (add table for each user?)
+    Columns:       (same as products)
+    Username:      root
+    Password:      rootroot
     
 
 HOW TO USE XAMPP:
